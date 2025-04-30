@@ -39,6 +39,8 @@ else:
                print("You have insufficient funds.")
               elif withdraw <= minimum_balance:
                print("You have insufficient funds since the amount to withdraw is the minimum balance or less.")  
+              elif current_balance-withdraw< minimum_balance:
+               print("You cannot withdraw since your minimum balance should remain UGX 20000. ")   
               else:
                current_balance-=withdraw
                print(f"You have withdrawn UGX {withdraw} and your current balance is UGX {current_balance}.")
